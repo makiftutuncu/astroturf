@@ -19,6 +19,11 @@ class MainActivity : WearableActivity() {
         initialize()
     }
 
+    override fun onDestroy() {
+        timer.cancel()
+        super.onDestroy()
+    }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (requestCode == stopConfirmRequestCode && resultCode == Activity.RESULT_OK) {
             stop()
@@ -41,9 +46,9 @@ class MainActivity : WearableActivity() {
     private val shortVibrationDuration: Long = 250L // 250 milliseconds
     private val vibrationAmplitude: Int      = 127  // 1: lowest, 255: highest
 
-    private var scoreA: Int = 0
-    private var scoreB: Int = 0
-
+    // App state
+    private var scoreA: Int        = 0
+    private var scoreB: Int        = 0
     private var isStarted: Boolean = false
 
     private val timer: CountDownTimer =
@@ -119,6 +124,7 @@ class MainActivity : WearableActivity() {
         scoreB = 0
         updateScore(tvScoreA, scoreA)
         updateScore(tvScoreB, scoreB)
+        isStarted = true
         vibrate(longVibrationDuration)
         btnStartStop.text = getString(R.string.stop)
         timer.start()
@@ -127,6 +133,7 @@ class MainActivity : WearableActivity() {
     private fun stop() {
         Log.d(tag, "Stop!")
         timer.cancel()
+        isStarted = false
         updateStatus(getMatchResult(), R.dimen.statusSmallTextSize)
         btnStartStop.text = getString(R.string.rematch)
         vibrate(longVibrationDuration)
@@ -145,9 +152,7 @@ class MainActivity : WearableActivity() {
     }
 
     private fun toggleStartStop() {
-        isStarted = !isStarted
-
-        if (isStarted) {
+        if (!isStarted) {
             start()
         } else {
             val intent = Intent(applicationContext, StopConfirmActivity::class.java)

@@ -35,4 +35,6 @@
     <dimen name="teamMarginEnd">8dp</dimen>
 
     <dimen name="stopConfirmTextSize">24sp</dimen>
+    <dimen name="stopConfirmButtonSize">48dp</dimen>
+    <dimen name="stopConfirmMargin">36dp</dimen>
 </resources>

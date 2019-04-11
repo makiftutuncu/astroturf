@@ -9,35 +9,32 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity"
         tools:deviceIds="wear"
+        app:boxedEdges="all"
         android:padding="@dimen/box_inset_layout_padding">
 
-    <FrameLayout
+    <TextView
+            android:gravity="center"
+            android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="5dp"
-            app:boxedEdges="all">
+            android:text="@string/stopConfirm"
+            android:textSize="@dimen/stopConfirmTextSize"
+            android:layout_margin="@dimen/stopConfirmMargin"
+            android:textColor="@color/white" />
 
-        <TextView
-                android:gravity="center"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:text="@string/stopConfirm"
-                android:textSize="@dimen/stopConfirmTextSize"
-                android:textColor="@color/white" />
+    <ImageButton
+            android:id="@+id/btnCancel"
+            android:layout_gravity="bottom|start"
+            android:layout_height="@dimen/stopConfirmButtonSize"
+            android:layout_width="@dimen/stopConfirmButtonSize"
+            android:layout_margin="@dimen/stopConfirmMargin"
+            android:background="@drawable/ic_cancel" />
 
-        <ImageButton
-                android:id="@+id/btnCancel"
-                android:layout_gravity="bottom|start"
-                android:layout_height="50dp"
-                android:layout_width="50dp"
-                android:background="@drawable/ic_cancel" />
-
-        <ImageButton
-                android:id="@+id/btnOk"
-                android:layout_gravity="bottom|end"
-                android:layout_height="50dp"
-                android:layout_width="50dp"
-                android:background="@drawable/ic_ok" />
-    </FrameLayout>
+    <ImageButton
+            android:id="@+id/btnOk"
+            android:layout_gravity="bottom|end"
+            android:layout_height="@dimen/stopConfirmButtonSize"
+            android:layout_width="@dimen/stopConfirmButtonSize"
+            android:layout_margin="@dimen/stopConfirmMargin"
+            android:background="@drawable/ic_ok" />
 
 </androidx.wear.widget.BoxInsetLayout>
