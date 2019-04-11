@@ -33,4 +33,6 @@
     <dimen name="teamTextSize">32sp</dimen>
     <dimen name="teamMarginStart">8dp</dimen>
     <dimen name="teamMarginEnd">8dp</dimen>
+
+    <dimen name="stopConfirmTextSize">24sp</dimen>
 </resources>

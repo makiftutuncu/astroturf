@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.wear.widget.BoxInsetLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/dark_grey"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        tools:deviceIds="wear"
+        android:padding="@dimen/box_inset_layout_padding">
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            app:boxedEdges="all">
+
+        <TextView
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@string/stopConfirm"
+                android:textSize="@dimen/stopConfirmTextSize"
+                android:textColor="@color/white" />
+
+        <ImageButton
+                android:id="@+id/btnCancel"
+                android:layout_gravity="bottom|start"
+                android:layout_height="50dp"
+                android:layout_width="50dp"
+                android:background="@drawable/ic_cancel" />
+
+        <ImageButton
+                android:id="@+id/btnOk"
+                android:layout_gravity="bottom|end"
+                android:layout_height="50dp"
+                android:layout_width="50dp"
+                android:background="@drawable/ic_ok" />
+    </FrameLayout>
+
+</androidx.wear.widget.BoxInsetLayout>

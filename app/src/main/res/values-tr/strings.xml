@@ -7,4 +7,5 @@
     <string name="teamBWins">Takım B Kazandı!</string>
     <string name="draw">Berabere!</string>
     <string name="changeGoalKeeper">Kaleci Değişikliği!</string>
+    <string name="stopConfirm">Durdurmak istiyor musunuz?</string>
 </resources>

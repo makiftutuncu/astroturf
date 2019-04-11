@@ -1,6 +1,8 @@
 package com.github.makiftutuncu.astroturf
 
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.os.*
 import android.support.wearable.activity.WearableActivity
 import android.util.Log
@@ -17,7 +19,17 @@ class MainActivity : WearableActivity() {
         initialize()
     }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        if (requestCode == stopConfirmRequestCode && resultCode == Activity.RESULT_OK) {
+            stop()
+        } else {
+            super.onActivityResult(requestCode, resultCode, data)
+        }
+    }
+
     private val tag: String = "Astroturf"
+
+    private val stopConfirmRequestCode: Int = 5
 
     private val matchDuration: Int            = 60 * 60 * 1000 // 60 minutes
     private val goalKeeperChangeDuration: Int = 10 * 60 * 1000 // 10 minutes
@@ -138,7 +150,8 @@ class MainActivity : WearableActivity() {
         if (isStarted) {
             start()
         } else {
-            stop()
+            val intent = Intent(applicationContext, StopConfirmActivity::class.java)
+            startActivityForResult(intent, stopConfirmRequestCode)
         }
     }
 

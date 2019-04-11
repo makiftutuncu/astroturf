@@ -32,6 +32,10 @@
 
         </activity>
 
+        <activity
+                android:name=".StopConfirmActivity"
+                android:label="@string/appName" />
+
     </application>
 
 </manifest>
