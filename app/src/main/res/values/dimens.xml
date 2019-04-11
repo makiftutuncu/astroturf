@@ -12,4 +12,25 @@
     inner_frame_layout_padding (below variable) on round screens.
     -->
     <dimen name="inner_frame_layout_padding">5dp</dimen>
+
+    <dimen name="separatorWidth">48dp</dimen>
+
+    <dimen name="startStopHeight">24dp</dimen>
+    <dimen name="startStopTextSize">12sp</dimen>
+    <dimen name="startStopMarginTop">12dp</dimen>
+
+    <dimen name="statusHeight">40dp</dimen>
+    <dimen name="statusTextSize">24sp</dimen>
+    <dimen name="statusSmallTextSize">16sp</dimen>
+    <dimen name="statusMarginBottom">16dp</dimen>
+
+    <dimen name="incrementDecrementWidth">32dp</dimen>
+    <dimen name="incrementDecrementHeight">24dp</dimen>
+    <dimen name="incrementDecrementTextSize">12sp</dimen>
+
+    <dimen name="scoreTextSize">48sp</dimen>
+
+    <dimen name="teamTextSize">32sp</dimen>
+    <dimen name="teamMarginStart">8dp</dimen>
+    <dimen name="teamMarginEnd">8dp</dimen>
 </resources>

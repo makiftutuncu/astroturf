@@ -1,8 +1,15 @@
 <resources>
-    <string name="app_name">Astroturf</string>
-    <!--
-    This string is used for square devices and overridden by hello_world in
-    values-round/strings.xml for round devices.
-    -->
-    <string name="hello_world">Hello Square World!</string>
+    <string name="appName">Astroturf</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="rematch">Rematch</string>
+    <string name="teamAWins">Team A Wins!</string>
+    <string name="teamBWins">Team B Wins!</string>
+    <string name="draw">Draw!</string>
+    <string name="increment">+</string>
+    <string name="decrement">-</string>
+    <string name="changeGoalKeeper">Change Goal Keeper!</string>
+    <string name="placeholder0">0</string>
+    <string name="placeholderA">A</string>
+    <string name="placeholderB">B</string>
 </resources>
