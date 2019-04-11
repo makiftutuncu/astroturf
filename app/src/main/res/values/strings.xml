@@ -6,10 +6,10 @@
     <string name="teamAWins">Team A Wins!</string>
     <string name="teamBWins">Team B Wins!</string>
     <string name="draw">Draw!</string>
-    <string name="increment">+</string>
-    <string name="decrement">-</string>
     <string name="changeGoalKeeper">Change Goal Keeper!</string>
-    <string name="placeholder0">0</string>
-    <string name="placeholderA">A</string>
-    <string name="placeholderB">B</string>
+    <string name="increment" translatable="false">+</string>
+    <string name="decrement" translatable="false">-</string>
+    <string name="placeholder0" translatable="false">0</string>
+    <string name="placeholderA" translatable="false">A</string>
+    <string name="placeholderB" translatable="false">B</string>
 </resources>

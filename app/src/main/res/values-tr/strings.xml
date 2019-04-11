@@ -1,0 +1,10 @@
+<resources>
+    <string name="appName">Halı Saha</string>
+    <string name="start">Başlat</string>
+    <string name="stop">Durdur</string>
+    <string name="rematch">Tekrarla</string>
+    <string name="teamAWins">Takım A Kazandı!</string>
+    <string name="teamBWins">Takım B Kazandı!</string>
+    <string name="draw">Berabere!</string>
+    <string name="changeGoalKeeper">Kaleci Değişikliği!</string>
+</resources>
